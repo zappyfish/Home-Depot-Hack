@@ -45,19 +45,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public static final String GOOGLE_SEARCH_URL = "https://www.google.com/search";
-    public static final Set<String> MY_SET = new HashSet<String>(Arrays.asList(IGNORED_WORDS));
-
-    //list of most common words in english. Copied from https://gist.github.com/gravitymonkey/2406023
-    public static final String[] IGNORED_WORDS = new String[] {"the","of","and","a","to","in","is",
-            "you","that","it","he","was","for","on","are","as","with","his","they","I","at","be",
-            "this","have","from","or","one","had","by","word","but","not","what","all","were","we",
-            "when","your","can","said","there","use","an","each","which","she","do","how","their",
-            "if","will","up","other","about","out","many","then","them","these","so","some","her",
-            "would","make","like","him","into","has","look","two","more","write","go","see",
-            "no","way","could","people","my","than","first","been","call","who",
-            "its","now","find","down","day","did","get","come","made","may","part"};
-
-    public static final Set<String> MY_SET = new HashSet<String>(Arrays.asList(IGNORED_WORDS));
+    
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -82,19 +70,29 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    public static Set<String> searchKeywords (String search){
-        Set<String> keyWords = new HashSet<String>();
-        StringTokenizer token = new StringTokenizer(search);
+    public static List<String> searchKeywords (String search){
+        String [] array = {"the","of","and","a","to","in","is",
+                "you","that","it","he","was","for","on","are","as","with","his","they","I","at","be",
+                "this","have","from","or","one","had","by","word","but","not","what","all","were","we",
+                "when","your","can","said","there","use","an","each","which","she","do","how","their",
+                "if","will","up","other","about","out","many","then","them","these","so","some","her",
+                "would","make","like","him","into","has","look","two","more","write","go","see",
+                "no","way","could","people","my","than","first","been","call","who", "lets", "thing",
+                "its","now","find","down","day","did","get","come","made","may","part"};
+        List <String> list = Arrays.asList(array);
+        List<String> keywords = new ArrayList<String>();
 
-        while (token.hasMoreTokens()){
-            String keywordCandidate = token.nextToken().toLowerCase();
-            if (!MY_SET.contains(keywordCandidate)){
-                keyWords.add(keywordCandidate);
+        StringTokenizer tokenizer = new StringTokenizer(search);
+
+        while (tokenizer.hasMoreTokens()){
+            String word = tokenizer.nextToken();
+            if (!list.contains(word)){
+                keywords.add(word);
+
             }
 
         }
-
-        return keyWords;
+        return keywords;
     }
 
     public static void getResults() throws Exception {
