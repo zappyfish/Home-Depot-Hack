@@ -45,7 +45,19 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public static final String GOOGLE_SEARCH_URL = "https://www.google.com/search";
-    
+
+
+    //list of most common words in english. Copied from https://gist.github.com/gravitymonkey/2406023
+    public static final String[] IGNORED_WORDS = new String[] {"the","of","and","a","to","in","is",
+            "you","that","it","he","was","for","on","are","as","with","his","they","I","at","be",
+            "this","have","from","or","one","had","by","word","but","not","what","all","were","we",
+            "when","your","can","said","there","use","an","each","which","she","do","how","their",
+            "if","will","up","other","about","out","many","then","them","these","so","some","her",
+            "would","make","like","him","into","has","look","two","more","write","go","see",
+            "no","way","could","people","my","than","first","been","call","who",
+            "its","now","find","down","day","did","get","come","made","may","part"};
+
+    public static final Set<String> MY_SET = new HashSet<String>(Arrays.asList(IGNORED_WORDS));
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,7 +73,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String searchURL = "http://www.google.com/#q=";
                 searchURL += searchEnter.getText().toString();
-                Toast t = Toast.makeText(MainActivity.this, searchURL, Toast.LENGTH_SHORT);
+                String keywords = searchEnter.getText().toString(), keywordFinal = "";
+                List<String> kw = searchKeywords(keywords);
+                for (String word : kw){
+                    keywordFinal += " " + word;
+                }
+                Toast t = Toast.makeText(MainActivity.this, keywordFinal, Toast.LENGTH_SHORT);
                 t.show();
                 Uri uri = Uri.parse(searchURL);
                 Intent intent = new Intent(Intent.ACTION_VIEW, uri);
@@ -79,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
                 "would","make","like","him","into","has","look","two","more","write","go","see",
                 "no","way","could","people","my","than","first","been","call","who", "lets", "thing",
                 "its","now","find","down","day","did","get","come","made","may","part"};
-        List <String> list = Arrays.asList(array);
+        List<String> list = Arrays.asList(array);
         List<String> keywords = new ArrayList<String>();
 
         StringTokenizer tokenizer = new StringTokenizer(search);
@@ -95,7 +112,7 @@ public class MainActivity extends AppCompatActivity {
         return keywords;
     }
 
-    public static void getResults() throws Exception {
+    /*public static void getResults() throws Exception {
         String google = "http://ajax.googleapis.com/ajax/services/search/web?v=1.0&q=";
         String search = "stackoverflow";
         String charset = "UTF-8";
@@ -107,7 +124,7 @@ public class MainActivity extends AppCompatActivity {
         // Show title and URL of 1st result.
         System.out.println(results.getResponseData().getResults().get(0).getTitle());
         System.out.println(results.getResponseData().getResults().get(0).getUrl());
-    }
+    }*/
 
 
     public static ArrayList<String> mostFreqKeywords(List<String> googResults) {
