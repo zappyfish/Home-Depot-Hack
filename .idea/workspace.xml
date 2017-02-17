@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca95a065-8b45-46be-a4e8-c37d5cff0da4" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TipOfMyTongue/app/src/main/java/liamkengineering/tipofmytongue/GoogleResults.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TipOfMyTongue/app/build.gradle" afterPath="$PROJECT_DIR$/TipOfMyTongue/app/build.gradle" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TipOfMyTongue/app/src/main/java/liamkengineering/tipofmytongue/MainActivity.java" afterPath="$PROJECT_DIR$/TipOfMyTongue/app/src/main/java/liamkengineering/tipofmytongue/MainActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TipOfMyTongue/app/src/main/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/TipOfMyTongue/app/src/main/res/layout/activity_main.xml" />
     </list>
     <ignored path="Home-Depot-Hack.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,11 +29,9 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TipOfMyTongue/app/src/main/java/liamkengineering/tipofmytongue/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="105">
+              <caret line="7" column="31" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -376,11 +376,9 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/TipOfMyTongue/app/src/main/java/liamkengineering/tipofmytongue/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="105">
+          <caret line="7" column="31" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
+          <folding />
         </state>
       </provider>
     </entry>
