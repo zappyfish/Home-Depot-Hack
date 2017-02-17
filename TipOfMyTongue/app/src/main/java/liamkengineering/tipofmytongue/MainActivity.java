@@ -73,7 +73,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String searchURL = "http://www.google.com/#q=";
                 searchURL += searchEnter.getText().toString();
-                Toast t = Toast.makeText(MainActivity.this, searchURL, Toast.LENGTH_SHORT);
+                String keywords = searchEnter.getText().toString(), keywordFinal = "";
+                List<String> kw = searchKeywords(keywords);
+                for (String word : kw){
+                    keywordFinal += " " + word;
+                }
+                Toast t = Toast.makeText(MainActivity.this, keywordFinal, Toast.LENGTH_SHORT);
                 t.show();
                 Uri uri = Uri.parse(searchURL);
                 Intent intent = new Intent(Intent.ACTION_VIEW, uri);
@@ -91,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
                 "would","make","like","him","into","has","look","two","more","write","go","see",
                 "no","way","could","people","my","than","first","been","call","who", "lets", "thing",
                 "its","now","find","down","day","did","get","come","made","may","part"};
-        List <String> list = Arrays.asList(array);
+        List<String> list = Arrays.asList(array);
         List<String> keywords = new ArrayList<String>();
 
         StringTokenizer tokenizer = new StringTokenizer(search);
