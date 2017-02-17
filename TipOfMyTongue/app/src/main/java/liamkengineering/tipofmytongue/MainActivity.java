@@ -119,7 +119,7 @@ public class MainActivity extends AppCompatActivity {
         // Show title and URL of 1st result.
         System.out.println(results.getResponseData().getResults().get(0).getTitle());
         System.out.println(results.getResponseData().getResults().get(0).getUrl());
-    }
+    }*/
 
 
     public static ArrayList<String> mostFreqKeywords(JSONObject googResults) {
@@ -145,5 +145,5 @@ public class MainActivity extends AppCompatActivity {
             results.add(a[i].toString());
         }
         return results;
-    }*/
+    }
 }
