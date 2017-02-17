@@ -10,9 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.google.gson.Gson;
-
 import java.io.BufferedReader;
 import org.json.*;
 import java.util.*;
@@ -24,13 +22,13 @@ import java.io.Reader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
-
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 public class MainActivity extends AppCompatActivity {
+
     //GoogleResults results;
     String apiKey;
     String engineKey;
@@ -47,7 +45,18 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public static final String GOOGLE_SEARCH_URL = "https://www.google.com/search";
-    public static final String[] IGNORED_WORDS = new String[] { "a", "an", "the", "thing" };
+    public static final Set<String> MY_SET = new HashSet<String>(Arrays.asList(IGNORED_WORDS));
+
+    //list of most common words in english. Copied from https://gist.github.com/gravitymonkey/2406023
+    public static final String[] IGNORED_WORDS = new String[] {"the","of","and","a","to","in","is",
+            "you","that","it","he","was","for","on","are","as","with","his","they","I","at","be",
+            "this","have","from","or","one","had","by","word","but","not","what","all","were","we",
+            "when","your","can","said","there","use","an","each","which","she","do","how","their",
+            "if","will","up","other","about","out","many","then","them","these","so","some","her",
+            "would","make","like","him","into","has","look","two","more","write","go","see",
+            "no","way","could","people","my","than","first","been","call","who",
+            "its","now","find","down","day","did","get","come","made","may","part"};
+
     public static final Set<String> MY_SET = new HashSet<String>(Arrays.asList(IGNORED_WORDS));
 
     @Override
