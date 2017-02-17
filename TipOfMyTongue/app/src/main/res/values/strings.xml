@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">TipOfMyTongue</string>
+    <string name="apikey">AIzaSyDBMNUm-_xux3E7Fm9VGzzOTZ90yAv8UoY</string>
+    <string name="enginekey">012019511911701620333:ojaa7h2wxnc</string>
 </resources>
