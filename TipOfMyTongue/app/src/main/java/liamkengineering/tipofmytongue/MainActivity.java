@@ -124,10 +124,15 @@ public class MainActivity extends AppCompatActivity {
 
     public static ArrayList<String> mostFreqKeywords(JSONObject googResults) {
         HashMap<String, Integer> map = new HashMap<String, Integer>();
-        JSONArray arr = googResults.getJSONArray("keyword"); // Insert key
-        for (int i = 0; i < arr.length(); i++) { // Map of word and number of occurrences
-            map.put(arr[i], map.get[arr[i]] + 1);
+        try {
+            JSONArray arr = googResults.getJSONArray("hi"); // Insert key
+            for (int i = 0; i < arr.length(); i++) { // Map of word and number of occurrences
+                map.put(arr.get(i).toString(), map.get(arr.get(i).toString()) + 1);
+            }
+        } catch (JSONException e) {
+            Log.e("OOPS", "unexpected JSON exception", e);
         }
+
         Object[] a = map.entrySet().toArray();
         Arrays.sort(a, new Comparator() { // Sort array by value
             public int compare(Object o1, Object o2) {
@@ -137,7 +142,7 @@ public class MainActivity extends AppCompatActivity {
         });
         ArrayList<String> results = new ArrayList<String>();
         for (int i = 0; i < 10; ++i) { // Add top ten most freq words
-            results.add(a[i].getValue());
+            results.add(a[i].toString());
         }
         return results;
     }*/
