@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    public ArrayList<String> mostFreqKeywords(set<String> tokens, JSONObject googResults) {
+    public ArrayList<String> mostFreqKeywords(JSONObject googResults) {
         HashMap<String, Integer> map = new HashMap<String, Integer>();
          //each key in the jsonobject
         JSONArray arr = googResults.getJSONArray("keyword"); //insert key
