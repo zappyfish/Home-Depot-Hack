@@ -13,6 +13,8 @@ import java.net.URL;
 import java.net.URLEncoder;
 
 public class MainActivity extends AppCompatActivity {
+    public static final String[] IGNORED_WORDS = new String[] { "a", "an", "the", "thing" };
+    public static final Set<String> MY_SET = new HashSet<String>(Arrays.asList(IGNORED_WORDS));
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +25,21 @@ public class MainActivity extends AppCompatActivity {
         Button searchBut = (Button) findViewById(R.id.searchButton);
 
 
+    }
+
+    public static Set<String> searchKeywords (String search){
+        Set<String> keyWords = new HashSet<String>();
+        StringTokenizer token = new StringTokenizer(search);
+
+        while (token.hasMoreTokens()){
+            String keywordCandidate = token.nextToken().toLowerCase();
+            if (!MY_SET.contains(keywordCandidate)){
+                keyWords.add(keywordCandidate);
+            }
+
+        }
+
+        return keyWords;
     }
 
     public static void getResults() throws Exception {
