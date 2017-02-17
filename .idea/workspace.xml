@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca95a065-8b45-46be-a4e8-c37d5cff0da4" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TipOfMyTongue/app/src/main/java/liamkengineering/tipofmytongue/GoogleResults.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TipOfMyTongue/app/build.gradle" afterPath="$PROJECT_DIR$/TipOfMyTongue/app/build.gradle" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TipOfMyTongue/app/src/main/java/liamkengineering/tipofmytongue/MainActivity.java" afterPath="$PROJECT_DIR$/TipOfMyTongue/app/src/main/java/liamkengineering/tipofmytongue/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TipOfMyTongue/app/src/main/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/TipOfMyTongue/app/src/main/res/layout/activity_main.xml" />
     </list>
     <ignored path="Home-Depot-Hack.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,9 +26,11 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TipOfMyTongue/app/src/main/java/liamkengineering/tipofmytongue/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="31" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
-              <folding />
+            <state relative-caret-position="885">
+              <caret line="59" column="23" selection-start-line="59" selection-start-column="23" selection-end-line="59" selection-end-column="23" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -341,6 +340,7 @@
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -376,9 +376,11 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/TipOfMyTongue/app/src/main/java/liamkengineering/tipofmytongue/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="31" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
-          <folding />
+        <state relative-caret-position="885">
+          <caret line="59" column="23" selection-start-line="59" selection-start-column="23" selection-end-line="59" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
